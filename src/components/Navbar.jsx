@@ -24,7 +24,7 @@ const Navbar = () => {
             <ul className="list-none flex flex-col justify-end items-center flex-1">
           {navLinks.map((nav,index)=>(
             <li key={nav.id} className={`text-white font-poppins font-normal cursor-pointer text-[16px] ${index===navLinks.length-1 ? 'mb-0' : 'mb-4'}`}>
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a href={`#${nav.id}`}  onClick={()=>setToggle((prev)=>!prev)}>{nav.title}</a>
             </li>
           ))}
             </ul>
